@@ -23,11 +23,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Grant Gradle execution permission
-        run: chmod +x gradlew
-
+      # මෙතන gradlew වෙනුවට gradle මඟින් direct බිල්ඩ් කිරීමට සකසා ඇත
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
