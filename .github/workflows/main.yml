@@ -20,9 +20,11 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      # මෙන්න මේකෙන් Gradle එක සම්පූර්ණයෙන්ම Auto manage වෙනවා (Caching සහ Setup)
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+
+      - name: Grant Gradle execution permission
+        run: chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
