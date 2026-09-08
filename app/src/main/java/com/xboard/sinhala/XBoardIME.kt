@@ -162,7 +162,7 @@ class XBoardIME :
                         if (englishMode)
                             data.english
                         else
-                            data.sinhalaOutput
+                            data.sinhala // මෙහි තිබූ sinhalaOutput යන්න sinhala ලෙස නිවැරදි කර ඇත
 
                     commit(output)
 
