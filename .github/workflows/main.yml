@@ -1,50 +1,34 @@
 name: Build X Board APK
 
 on:
-
   push:
     branches:
       - main
-
   workflow_dispatch:
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-
-      - name: Setup Java
+      - name: Setup Java 17
         uses: actions/setup-java@v4
-
         with:
           distribution: temurin
           java-version: "17"
 
-
-      - name: Setup Android
-        uses: android-actions/setup-android@v3
-
-
-      - name: Grant Gradle permission
-        run: chmod +x gradlew
-
+      # මෙන්න මේකෙන් Gradle එක සම්පූර්ණයෙන්ම Auto manage වෙනවා (Caching සහ Setup)
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
-
-      - name: Upload APK
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
-
         with:
           name: XBoard-APK
-
-          path:
-            app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
