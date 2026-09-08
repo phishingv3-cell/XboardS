@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView
+
+    xmlns:android=
+        "http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/toolbarScroll"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="48dp"
+
+    android:background="#000000"
+
+    android:scrollbars="none"
+
+    android:fillViewport="true">
+
+    <LinearLayout
+
+        android:id="@+id/toolbar"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical"
+
+        android:background="#000000">
+
+
+        <!-- 1 Suggest -->
+
+        <TextView
+
+            android:id="@+id/tSuggest"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:text="💡"
+
+            android:textSize="21sp"
+
+            android:textColor="#07F57E"
+
+            android:clickable="true"
+
+            android:focusable="true"/>
+
+
+        <!-- 2 Language -->
+
+        <TextView
+
+            android:id="@+id/tLanguage"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1.5"
+
+            android:gravity="center"
+
+            android:text="සිං / ENG"
+
+            android:textSize="13sp"
+
+            android:textColor="#FFFFFF"
+
+            android:clickable="true"
+
+            android:focusable="true"/>
+
+
+        <!-- 3 Emoji -->
+
+        <TextView
+
+            android:id="@+id/tEmoji"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:text="😊"
+
+            android:textSize="21sp"
+
+            android:clickable="true"
+
+            android:focusable="true"/>
+
+
+        <!-- 4 Decoration -->
+
+        <TextView
+
+            android:id="@+id/tDecoration"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:text="✨"
+
+            android:textSize="21sp"
+
+            android:clickable="true"
+
+            android:focusable="true"/>
+
+
+        <!-- 5 Clipboard -->
+
+        <TextView
+
+            android:id="@+id/tClipboard"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:text="📋"
+
+            android:textSize="21sp"
+
+            android:clickable="true"
+
+            android:focusable="true"/>
+
+
+        <!-- 6 Font -->
+
+        <TextView
+
+            android:id="@+id/tFont"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:text="Aa"
+
+            android:textSize="17sp"
+
+            android:textStyle="bold"
+
+            android:textColor="#07F57E"
+
+            android:clickable="true"
+
+            android:focusable="true"/>
+
+
+        <!-- 7 Dictionary -->
+
+        <TextView
+
+            android:id="@+id/tDictionary"
+
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:text="📖"
+
+            android:textSize="21sp"
+
+            android:clickable="true"
+
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</HorizontalScrollView>
