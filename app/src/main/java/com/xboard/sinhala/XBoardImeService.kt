@@ -225,11 +225,6 @@ class XBoardImeService : InputMethodService() {
         }
     }
 
-    /**
-     * IMPORTANT:
-     * This is deliberately based on the user's original typing request
-     * and is not changed when toolbar panels are added.
-     */
     private fun typeKey(label: String) {
         val ic = currentInputConnection ?: return
         val actual = if (shift && label.length == 1) label.uppercase() else label
@@ -289,7 +284,6 @@ class XBoardImeService : InputMethodService() {
         ic.finishComposingText()
         phoneticBuffer.clear()
 
-        // New line only. No Done/Send/Search action.
         ic.commitText("\n", 1)
         refresh()
     }
@@ -338,11 +332,6 @@ class XBoardImeService : InputMethodService() {
         refresh()
     }
 
-    /**
-     * This is the requested professional behaviour:
-     * when a toolbar feature is selected, letter keys disappear and
-     * the feature list occupies the keyboard area. Back returns to keys.
-     */
     private fun buildPanelHeader(): View {
         val row = LinearLayout(this).apply {
             orientation = LinearLayout.HORIZONTAL
@@ -619,7 +608,7 @@ class XBoardImeService : InputMethodService() {
 
     private fun vibrate() {
         if (prefs.vibrationEnabled) {
-            currentInputView?.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+            getInputView()?.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
         }
     }
 
