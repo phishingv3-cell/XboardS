@@ -31,8 +31,13 @@ class XBoardImeService : InputMethodService() {
     private var shift = false
     private var panel = Panel.NONE
     private var symbols = false
+    private var keyboardRootView: View? = null
 
-    override fun onCreateInputView(): View = buildKeyboard()
+    override fun onCreateInputView(): View {
+        val view = buildKeyboard()
+        keyboardRootView = view
+        return view
+    }
 
     override fun onStartInput(attribute: EditorInfo?, restarting: Boolean) {
         super.onStartInput(attribute, restarting)
@@ -608,7 +613,7 @@ class XBoardImeService : InputMethodService() {
 
     private fun vibrate() {
         if (prefs.vibrationEnabled) {
-            getInputView()?.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+            keyboardRootView?.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
         }
     }
 
