@@ -1,8 +1,32 @@
-plugins { id("com.android.application"); id("org.jetbrains.kotlin.android") }
-
-android { namespace="com.xboard.sinhala"; compileSdk=35
-    defaultConfig { applicationId="com.xboard.sinhala"; minSdk=26; targetSdk=35; versionCode=100; versionName="1.0-pro" }
+plugins { 
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
+
+android { 
+    namespace = "com.xboard.sinhala"
+    compileSdk = 35
+
+    defaultConfig { 
+        applicationId = "com.xboard.sinhala"
+        minSdk = 26
+        targetSdk = 35
+        versionCode = 100
+        versionName = "1.0-pro"
+    }
+
+    // Java version එක Java 17 වලට සෙට් කිරීම
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    // Kotlin JVM target එකත් 17 වලට සෙට් කිරීම
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
 dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
