@@ -1,0 +1,11 @@
+<resources>
+    <color name="x_green">#07F57E</color>
+    <color name="x_background">#070A0E</color>
+    <color name="x_surface">#0C151D</color>
+    <color name="x_surface_2">#101C26</color>
+    <color name="x_key">#11171C</color>
+    <color name="x_key_pressed">#1C2A34</color>
+    <color name="x_border">#234452</color>
+    <color name="x_text">#F3F6F8</color>
+    <color name="x_muted">#A6B4BE</color>
+</resources>
