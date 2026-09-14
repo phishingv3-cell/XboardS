@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-<color name="x_green">#07F57E</color><color name="x_bg">#020A0F</color><color name="x_panel">#07141D</color><color name="x_key">#091923</color><color name="x_key2">#0D202C</color><color name="x_line">#16445B</color><color name="x_white">#F4FAFF</color><color name="x_muted">#A8BBC8</color>
+    <color name="xboard_primary">#07f57e</color>
+    <color name="xboard_background">#0b131a</color>
+    <color name="xboard_surface">#111b21</color>
+    <color name="xboard_key_bg">#202c33</color>
+    <color name="xboard_text_white">#FFFFFF</color>
+    <color name="xboard_text_hint">#8696a0</color>
 </resources>
