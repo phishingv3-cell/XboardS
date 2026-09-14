@@ -30,8 +30,13 @@ class XBoardIME : InputMethodService() {
             "a", "s", "d", "f", "g", "h", "j", "k", "l",
             "z", "x", "c", "v", "b", "n", "m")
 
-        // Setup character keys
-        // (In production layout hierarchy, iterate through rows or find buttons by tag)
+        // Setup character keys dynamically using their tags (මෙමඟින් අකුරු එබීම ක්‍රියාත්මක කරයි)
+        for (tag in keyTags) {
+            val button = view.findViewWithTag<Button>(tag)
+            button?.setOnClickListener {
+                handleKeyPress(tag)
+            }
+        }
         
         view.findViewById<Button>(R.id.btnShift).setOnClickListener {
             isUppercase = !isUppercase
@@ -64,7 +69,7 @@ class XBoardIME : InputMethodService() {
 
         // Clipboard Actions
         view.findViewById<Button>(R.id.btnCopy).setOnClickListener {
-            // Implement copy logic via InputConnection selection if available
+            // Implement copy logic if needed
         }
         view.findViewById<Button>(R.id.btnPaste).setOnClickListener {
             val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -85,7 +90,6 @@ class XBoardIME : InputMethodService() {
         
         if (isSinhalaMode) {
             currentBuffer.append(targetChar)
-            // Note: Ensure SinhalaMapper class exists in your project
             val translated = SinhalaMapper.translate(currentBuffer.toString())
             if (translated != currentBuffer.toString()) {
                 ic.setComposingText(translated, 1)
