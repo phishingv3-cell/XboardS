@@ -3,7 +3,7 @@ package com.xboard.keyboard
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-input android.inputmethodservice.InputMethodService
+import android.inputmethodservice.InputMethodService
 import android.view.View
 import android.view.inputmethod.InputConnection
 import android.widget.Button
@@ -85,9 +85,9 @@ class XBoardIME : InputMethodService() {
         
         if (isSinhalaMode) {
             currentBuffer.append(targetChar)
+            // Note: Ensure SinhalaMapper class exists in your project
             val translated = SinhalaMapper.translate(currentBuffer.toString())
             if (translated != currentBuffer.toString()) {
-                // Replaces the phonetic string with actual Sinhala output glyph
                 ic.setComposingText(translated, 1)
             } else {
                 ic.commitText(targetChar, 1)
