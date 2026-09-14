@@ -1,1 +1,6 @@
-<resources><string name="app_name">X Board Sinhala Keyboard</string><string name="ime_name">X Board Sinhala Keyboard</string><string name="subtype_sinhala">Sinhala</string><string name="subtype_english">English</string></resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.XBoard" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/xboard_primary</item>
+        <item name="android:windowBackground">@color/xboard_background</item>
+    </style>
+</resources>
