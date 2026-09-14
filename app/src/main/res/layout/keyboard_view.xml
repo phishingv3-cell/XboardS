@@ -92,13 +92,12 @@
         <Button android:id="@+id/btnDelete" android:text="⌫" android:backgroundTint="@color/xboard_key_bg" android:textColor="@color/xboard_text_white" android:layout_width="0dp" android:layout_weight="1.5" android:layout_height="match_parent"/>
     </LinearLayout>
 
-    <!-- Row 4: ?123, Emoji, Space (X board), Enter -->
+    <!-- Row 4: 123, Emoji, Space (X board), Enter -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal">
-        <Button android:id="@+id/btnSymbol" android:text="?123" android:backgroundTint="@color/xboard_key_bg" android:textColor="@color/xboard_text_white" android:layout_width="0dp" android:layout_weight="1.5" android:layout_height="match_parent"/>
+        <Button android:id="@+id/btnSymbol" android:text="123" android:backgroundTint="@color/xboard_key_bg" android:textColor="@color/xboard_text_white" android:layout_width="0dp" android:layout_weight="1.5" android:layout_height="match_parent"/>
         <Button android:id="@+id/btnEmoji" android:text="😊" android:backgroundTint="@color/xboard_key_bg" android:textColor="@color/xboard_text_white" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"/>
         <Button android:id="@+id/btnSpace" android:text="X board" android:backgroundTint="@color/xboard_key_bg" android:textColor="@color/xboard_primary" android:textStyle="bold" android:layout_width="0dp" android:layout_weight="4.5" android:layout_height="match_parent"/>
         <Button android:id="@+id/btnEnter" android:text="↵" android:backgroundTint="@color/xboard_primary" android:textColor="@color/xboard_background" android:layout_width="0dp" android:layout_weight="1.5" android:layout_height="match_parent"/>
     </LinearLayout>
 
 </LinearLayout>
-
