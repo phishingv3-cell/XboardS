@@ -20,14 +20,14 @@ jobs:
           distribution: temurin
           java-version: "17"
 
+      # මෙතනින් නිවැරදි Gradle අනුවාදයක් (ഉദാ: 8.2) සෙට් කරමු
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-
-      - name: Make Gradle Wrapper Executable
-        run: chmod +x gradlew
+        with:
+          gradle-version: "8.2"
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
