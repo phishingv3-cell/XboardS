@@ -23,9 +23,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      # මෙතන gradlew වෙනුවට gradle මඟින් direct බිල්ඩ් කිරීමට සකසා ඇත
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x gradlew
+
       - name: Build Debug APK
-        run: gradle assembleDebug
+        run: ./gradlew assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
